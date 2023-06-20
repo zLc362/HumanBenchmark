@@ -1,0 +1,6 @@
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\HumanBenchmark.exe
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\HumanBenchmark.dll
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\HumanBenchmark.deps.json
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\HumanBenchmark.runtimeconfig.json
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\HumanBenchmark.dll.config
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\HumanBenchmark.pdb

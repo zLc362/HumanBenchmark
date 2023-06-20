@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="HumanBenchmark.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <userSettings>
+        <HumanBenchmark.Properties.Settings>
+            <setting name="ReactionTime" serializeAs="String">
+                <value>0</value>
+            </setting>
+            <setting name="SequenceMemory" serializeAs="String">
+                <value>0</value>
+            </setting>
+            <setting name="WordMemory" serializeAs="String">
+                <value>0</value>
+            </setting>
+            <setting name="NumberMemory" serializeAs="String">
+                <value>0</value>
+            </setting>
+        </HumanBenchmark.Properties.Settings>
+    </userSettings>
+</configuration>
