@@ -46,8 +46,6 @@
             panel2 = new Panel();
             panel3 = new Panel();
             btn_Back = new Button();
-            btn_Reset_GHS = new Button();
-            btn_Reset_ALL = new Button();
             clickPanel.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -260,56 +258,12 @@
             btn_Back.MouseEnter += btn_Back_MouseEnter;
             btn_Back.MouseLeave += btn_Back_MouseLeave;
             // 
-            // btn_Reset_GHS
-            // 
-            btn_Reset_GHS.Anchor = AnchorStyles.Top;
-            btn_Reset_GHS.BackColor = Color.FromArgb(230, 232, 244);
-            btn_Reset_GHS.FlatAppearance.BorderSize = 0;
-            btn_Reset_GHS.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btn_Reset_GHS.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btn_Reset_GHS.FlatStyle = FlatStyle.Flat;
-            btn_Reset_GHS.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_Reset_GHS.Location = new Point(1349, 895);
-            btn_Reset_GHS.Name = "btn_Reset_GHS";
-            btn_Reset_GHS.Size = new Size(112, 57);
-            btn_Reset_GHS.TabIndex = 15;
-            btn_Reset_GHS.Text = "Clear Global\r\nHighscore";
-            btn_Reset_GHS.TextImageRelation = TextImageRelation.TextAboveImage;
-            btn_Reset_GHS.UseVisualStyleBackColor = false;
-            btn_Reset_GHS.Click += btn_Reset_GHS_Click;
-            btn_Reset_GHS.Paint += btn_Reset_GHS_Paint;
-            btn_Reset_GHS.MouseEnter += btn_Reset_GHS_MouseEnter;
-            btn_Reset_GHS.MouseLeave += btn_Reset_GHS_MouseLeave;
-            // 
-            // btn_Reset_ALL
-            // 
-            btn_Reset_ALL.Anchor = AnchorStyles.Top;
-            btn_Reset_ALL.BackColor = Color.FromArgb(230, 232, 244);
-            btn_Reset_ALL.FlatAppearance.BorderSize = 0;
-            btn_Reset_ALL.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btn_Reset_ALL.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btn_Reset_ALL.FlatStyle = FlatStyle.Flat;
-            btn_Reset_ALL.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_Reset_ALL.Location = new Point(1349, 834);
-            btn_Reset_ALL.Name = "btn_Reset_ALL";
-            btn_Reset_ALL.Size = new Size(112, 57);
-            btn_Reset_ALL.TabIndex = 16;
-            btn_Reset_ALL.Text = "Clear Local\r\nScores";
-            btn_Reset_ALL.TextImageRelation = TextImageRelation.TextAboveImage;
-            btn_Reset_ALL.UseVisualStyleBackColor = false;
-            btn_Reset_ALL.Click += btn_Reset_ALL_Click;
-            btn_Reset_ALL.Paint += btn_Reset_ALL_Paint;
-            btn_Reset_ALL.MouseEnter += btn_Reset_ALL_MouseEnter;
-            btn_Reset_ALL.MouseLeave += btn_Reset_ALL_MouseLeave;
-            // 
             // form_Reaction_Time
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 232, 244);
             ClientSize = new Size(1584, 957);
-            Controls.Add(btn_Reset_ALL);
-            Controls.Add(btn_Reset_GHS);
             Controls.Add(btn_Back);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -350,7 +304,5 @@
         private Panel panel2;
         private Panel panel3;
         private Button btn_Back;
-        private Button btn_Reset_GHS;
-        private Button btn_Reset_ALL;
     }
 }

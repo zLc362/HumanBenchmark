@@ -123,5 +123,15 @@ namespace HumanBenchmark
 
             this.Show();
         }
+
+        private void btn_highscores_MouseLeave(object sender, EventArgs e)
+        {
+            btn_highscores.BackgroundImage = Resources.Highscore_Normal;
+        }
+
+        private void btn_highscores_MouseEnter(object sender, EventArgs e)
+        {
+            btn_highscores.BackgroundImage = Resources.Highscore_Active;
+        }
     }
 }

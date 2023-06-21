@@ -38,6 +38,7 @@
             label4 = new Label();
             label5 = new Label();
             btn_Shut_Down = new Button();
+            btn_highscores = new Button();
             SuspendLayout();
             // 
             // label1
@@ -192,12 +193,30 @@
             btn_Shut_Down.MouseEnter += btn_Shut_Down_MouseEnter;
             btn_Shut_Down.MouseLeave += btn_Shut_Down_MouseLeave;
             // 
+            // btn_highscores
+            // 
+            btn_highscores.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_highscores.BackColor = SystemColors.MenuHighlight;
+            btn_highscores.BackgroundImage = Properties.Resources.Highscore_Normal;
+            btn_highscores.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_highscores.CausesValidation = false;
+            btn_highscores.FlatAppearance.BorderSize = 0;
+            btn_highscores.FlatStyle = FlatStyle.Flat;
+            btn_highscores.Location = new Point(1365, 490);
+            btn_highscores.Name = "btn_highscores";
+            btn_highscores.Size = new Size(150, 150);
+            btn_highscores.TabIndex = 10;
+            btn_highscores.UseVisualStyleBackColor = false;
+            btn_highscores.MouseEnter += btn_highscores_MouseEnter;
+            btn_highscores.MouseLeave += btn_highscores_MouseLeave;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuHighlight;
             ClientSize = new Size(1527, 652);
+            Controls.Add(btn_highscores);
             Controls.Add(btn_Shut_Down);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -230,5 +249,6 @@
         private Label label4;
         private Label label5;
         private Button btn_Shut_Down;
+        private Button btn_highscores;
     }
 }

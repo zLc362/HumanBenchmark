@@ -1,4 +1,5 @@
-﻿using Plasmoid.Extensions;
+﻿using HumanBenchmark.Properties;
+using Plasmoid.Extensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,35 +14,51 @@ namespace HumanBenchmark
 {
     public partial class form_Number_Memory : Form
     {
-        public Random random = new Random();
-        public int numberToGuess { get; set; }
-        public int lowerBound { get; set; }
-        public int upperBound { get; set; }
-        public int level { get; set; }
-        public bool started { get; set; }
-        public bool enteringNumber { get; set; }
-        public String buttonDisplay { get; set; }
-
+        private Random random = new Random();
+        private String numberToGuess { get; set; }
+        private int lowerBound { get; set; }
+        private int upperBound { get; set; }
+        private int level { get; set; }
+        private bool started { get; set; }
+        private bool enteringNumber { get; set; }
+        private String buttonDisplay { get; set; }
+        private Font font_regular { get; set; }
+        private Font font_large { get; set; }
 
         public form_Number_Memory()
         {
             InitializeComponent();
+            numberToGuess = "";
             started = false;
             enteringNumber = false;
             tbx_number_enter.Hide();
             progress_bar_back.Hide();
             progress_bar_front.Hide();
             buttonDisplay = "Start";
+            font_regular = lbl_Center.Font;
+            font_large = new Font("Segoe UI", 40, FontStyle.Bold);
+            Form1.disableHoverColorChange(btn_Start_Next);
+            Form1.disableHoverColorChange(btn_Back);
         }
-
+        private void getNewNumber()
+        {
+            StringBuilder numberToGuessString = new StringBuilder();
+            for (int i = 0; i < level; i++)
+            {
+                numberToGuessString.Append(random.Next(0, 10));
+            }
+            numberToGuess = numberToGuessString.ToString();
+        }
         private void tmr_countdown_Tick(object sender, EventArgs e)
         {
+
             if (progress_bar_front.Width < 1)
             {
                 progress_bar_front.Width = progress_bar_back.Width;
                 tmr_countdown.Stop();
                 btn_Start_Next.Show();
                 lbl_Center.Hide();
+                lbl_Center.Font = font_regular;
                 tbx_number_enter.Show();
                 tbx_number_enter.Focus();
                 enteringNumber = true;
@@ -49,9 +66,10 @@ namespace HumanBenchmark
                 progress_bar_front.Hide();
                 buttonDisplay = "Guess";
                 btn_Start_Next.Invalidate();
+
                 return;
             }
-            progress_bar_front.Width = (int)(progress_bar_front.Width - (progress_bar_back.Width * 0.001));
+            progress_bar_front.Width = (int)(progress_bar_front.Width - (progress_bar_back.Width * 0.004));
         }
         private void StartUp()
         {
@@ -61,9 +79,10 @@ namespace HumanBenchmark
             btn_Start_Next.Hide();
             lowerBound = 1;
             upperBound = 10;
-            level = 0;
-            numberToGuess = random.Next(lowerBound, upperBound);
+            level = 1;
+            getNewNumber();
             lbl_Center.Text = numberToGuess.ToString();
+            lbl_Center.Font = font_large;
             progress_bar_back.Show();
             progress_bar_front.Show();
             buttonDisplay = "Next";
@@ -81,11 +100,12 @@ namespace HumanBenchmark
                 if (enteringNumber)
                 {
                     enteringNumber = false;
-                    lbl_Center.Text = String.Format("Number:\r\n{0}\r\nYour Guess:\r\n{1}", numberToGuess, tbx_number_enter.Text);
+                    lbl_Center.Font = font_regular;
+                    lbl_Center.Text = String.Format("Number:\r\n{0}\r\nYour Guess:\r\n{1}\r\nLevel {2}", numberToGuess, tbx_number_enter.Text, level);
                     lbl_Center.Show();
                     tbx_number_enter.Hide();
 
-                    if (numberToGuess.ToString().Equals(tbx_number_enter.Text))
+                    if (numberToGuess.Equals(tbx_number_enter.Text))
                     {
                         level++;
                         lowerBound *= 10;
@@ -100,13 +120,15 @@ namespace HumanBenchmark
                         btn_Start_Next.Invalidate();
                     }
                     tbx_number_enter.Text = String.Empty;
-                    numberToGuess = random.Next(lowerBound, upperBound);
+                    getNewNumber();
+
 
                 }
                 else
                 {
+                    lbl_Center.Font = font_large;
                     lbl_Center.Text = numberToGuess.ToString();
-                    tmr_countdown.Interval = (int)(tmr_countdown.Interval * 1.2);
+                    tmr_countdown.Interval = (int)(tmr_countdown.Interval * 1.1);
                     tmr_countdown.Start();
                     btn_Start_Next.Hide();
                     progress_bar_back.Show();
@@ -171,6 +193,16 @@ namespace HumanBenchmark
             {
                 btn_Start_Next_Click(null, null);
             }
+        }
+
+        private void btn_Back_MouseEnter(object sender, EventArgs e)
+        {
+            btn_Back.BackgroundImage = Resources.Back_Active;
+        }
+
+        private void btn_Back_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Back.BackgroundImage = Resources.Back_Normal;
         }
     }
 }

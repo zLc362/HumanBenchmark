@@ -83,6 +83,26 @@ namespace HumanBenchmark.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Highscore_Active {
+            get {
+                object obj = ResourceManager.GetObject("Highscore_Active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Highscore_Normal {
+            get {
+                object obj = ResourceManager.GetObject("Highscore_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Number_Memory_Active {
             get {
                 object obj = ResourceManager.GetObject("Number_Memory_Active", resourceCulture);

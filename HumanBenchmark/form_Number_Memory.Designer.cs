@@ -53,15 +53,17 @@
             btn_Back.TabIndex = 15;
             btn_Back.UseVisualStyleBackColor = false;
             btn_Back.Click += btn_Back_Click;
+            btn_Back.MouseEnter += btn_Back_MouseEnter;
+            btn_Back.MouseLeave += btn_Back_MouseLeave;
             // 
             // lbl_Center
             // 
             lbl_Center.Anchor = AnchorStyles.None;
-            lbl_Center.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Center.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_Center.ForeColor = Color.White;
-            lbl_Center.Location = new Point(345, 131);
+            lbl_Center.Location = new Point(307, 131);
             lbl_Center.Name = "lbl_Center";
-            lbl_Center.Size = new Size(761, 313);
+            lbl_Center.Size = new Size(847, 313);
             lbl_Center.TabIndex = 0;
             lbl_Center.Text = "A number will briefly show on the screen\r\nAfter it dissapears, write down the number";
             lbl_Center.TextAlign = ContentAlignment.MiddleCenter;
@@ -119,11 +121,10 @@
             // lbl_highscore
             // 
             lbl_highscore.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            lbl_highscore.AutoSize = true;
             lbl_highscore.Font = new Font("Segoe UI", 26F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_highscore.Location = new Point(1262, 669);
+            lbl_highscore.Location = new Point(1226, 669);
             lbl_highscore.Name = "lbl_highscore";
-            lbl_highscore.Size = new Size(160, 60);
+            lbl_highscore.Size = new Size(196, 60);
             lbl_highscore.TabIndex = 19;
             lbl_highscore.Text = "Level 0";
             lbl_highscore.Paint += lbl_highscore_Paint;

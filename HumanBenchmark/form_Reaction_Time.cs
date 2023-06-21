@@ -37,7 +37,7 @@ namespace HumanBenchmark
             Startup();
             updateLabels();
             Form1.disableHoverColorChange(btn_Back);
-            Form1.disableHoverColorChange(btn_Reset_GHS);
+            //Form1.disableHoverColorChange(btn_Reset_GHS);
             brushBtn_Global = new SolidBrush(Color.White);
             brushBtn_ALL = new SolidBrush(Color.White);
             lbl_Center.BackColor = System.Drawing.Color.Transparent;
@@ -166,77 +166,77 @@ namespace HumanBenchmark
             btn_Back.BackgroundImage = Resources.Back_Normal;
         }
 
-        private void btn_Reset_GHS_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to reset the Global Highscore for this game?", "Reset Highscore?", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                HighScores.Reaction_Time = HighScores.MAXREACT;
-                updateLabels();
-                panel3.Invalidate();
-            }
-        }
+        //private void btn_Reset_GHS_Click(object sender, EventArgs e)
+        //{
+        //    if (MessageBox.Show("Are you sure you want to reset the Global Highscore for this game?", "Reset Highscore?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+        //    {
+        //        HighScores.Reaction_Time = HighScores.MAXREACT;
+        //        updateLabels();
+        //        panel3.Invalidate();
+        //    }
+        //}
 
-        private void btn_Reset_GHS_Paint(object sender, PaintEventArgs e)
-        {
+        //private void btn_Reset_GHS_Paint(object sender, PaintEventArgs e)
+        //{
 
-            Brush brush2 = new SolidBrush(Color.Black);
-            e.Graphics.FillRoundedRectangle(brushBtn_Global, e.ClipRectangle, 15);
+        //    Brush brush2 = new SolidBrush(Color.Black);
+        //    e.Graphics.FillRoundedRectangle(brushBtn_Global, e.ClipRectangle, 15);
 
-            StringFormat format = new StringFormat();
-            format.Alignment = StringAlignment.Center;
-            format.LineAlignment = StringAlignment.Center;
-            e.Graphics.DrawString("Clear Global\r\nHighscore", btn_Reset_GHS.Font, brush2, e.ClipRectangle, format);
+        //    StringFormat format = new StringFormat();
+        //    format.Alignment = StringAlignment.Center;
+        //    format.LineAlignment = StringAlignment.Center;
+        //    e.Graphics.DrawString("Clear Global\r\nHighscore", btn_Reset_GHS.Font, brush2, e.ClipRectangle, format);
 
-            brush2.Dispose();
-        }
+        //    brush2.Dispose();
+        //}
 
-        private void btn_Reset_GHS_MouseEnter(object sender, EventArgs e)
-        {
-            brushBtn_Global = new SolidBrush(Color.FromKnownColor(KnownColor.LightGray));
-        }
+        //private void btn_Reset_GHS_MouseEnter(object sender, EventArgs e)
+        //{
+        //    brushBtn_Global = new SolidBrush(Color.FromKnownColor(KnownColor.LightGray));
+        //}
 
-        private void btn_Reset_GHS_MouseLeave(object sender, EventArgs e)
-        {
-            brushBtn_Global = new SolidBrush(Color.White);
-        }
+        //private void btn_Reset_GHS_MouseLeave(object sender, EventArgs e)
+        //{
+        //    brushBtn_Global = new SolidBrush(Color.White);
+        //}
 
         private void clickPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void btn_Reset_ALL_Paint(object sender, PaintEventArgs e)
-        {
-            Brush brush2 = new SolidBrush(Color.Black);
-            e.Graphics.FillRoundedRectangle(brushBtn_ALL, e.ClipRectangle, 15);
+        //private void btn_Reset_ALL_Paint(object sender, PaintEventArgs e)
+        //{
+        //    Brush brush2 = new SolidBrush(Color.Black);
+        //    e.Graphics.FillRoundedRectangle(brushBtn_ALL, e.ClipRectangle, 15);
 
-            StringFormat format = new StringFormat();
-            format.Alignment = StringAlignment.Center;
-            format.LineAlignment = StringAlignment.Center;
-            e.Graphics.DrawString("Clear Local\r\nScore", btn_Reset_GHS.Font, brush2, e.ClipRectangle, format);
+        //    StringFormat format = new StringFormat();
+        //    format.Alignment = StringAlignment.Center;
+        //    format.LineAlignment = StringAlignment.Center;
+        //    e.Graphics.DrawString("Clear Local\r\nScore", btn_Reset_GHS.Font, brush2, e.ClipRectangle, format);
 
-            brush2.Dispose();
-        }
+        //    brush2.Dispose();
+        //}
 
-        private void btn_Reset_ALL_MouseEnter(object sender, EventArgs e)
-        {
-            brushBtn_ALL = new SolidBrush(Color.FromKnownColor(KnownColor.LightGray));
-        }
+        //private void btn_Reset_ALL_MouseEnter(object sender, EventArgs e)
+        //{
+        //    brushBtn_ALL = new SolidBrush(Color.FromKnownColor(KnownColor.LightGray));
+        //}
 
-        private void btn_Reset_ALL_MouseLeave(object sender, EventArgs e)
-        {
-            brushBtn_ALL = new SolidBrush(Color.White);
-        }
+        //private void btn_Reset_ALL_MouseLeave(object sender, EventArgs e)
+        //{
+        //    brushBtn_ALL = new SolidBrush(Color.White);
+        //}
 
-        private void btn_Reset_ALL_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to reset the scores for this game?", "Reset scores?", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                scores.clearScores();
-                updateLabels();
-                panel1.Invalidate();
-                panel2.Invalidate();
-            }
-        }
+        //private void btn_Reset_ALL_Click(object sender, EventArgs e)
+        //{
+        //    if (MessageBox.Show("Are you sure you want to reset the scores for this game?", "Reset scores?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+        //    {
+        //        scores.clearScores();
+        //        updateLabels();
+        //        panel1.Invalidate();
+        //        panel2.Invalidate();
+        //    }
+        //}
     }
 }
