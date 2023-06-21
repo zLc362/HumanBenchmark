@@ -47,9 +47,9 @@
             btn_Back.FlatAppearance.BorderColor = Color.White;
             btn_Back.FlatAppearance.BorderSize = 0;
             btn_Back.FlatStyle = FlatStyle.Flat;
-            btn_Back.Location = new Point(12, 611);
+            btn_Back.Location = new Point(12, 579);
             btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(118, 118);
+            btn_Back.Size = new Size(150, 150);
             btn_Back.TabIndex = 15;
             btn_Back.UseVisualStyleBackColor = false;
             btn_Back.Click += btn_Back_Click;
@@ -110,7 +110,8 @@
             tbx_number_enter.Anchor = AnchorStyles.None;
             tbx_number_enter.BackColor = SystemColors.MenuHighlight;
             tbx_number_enter.BorderStyle = BorderStyle.None;
-            tbx_number_enter.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            tbx_number_enter.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            tbx_number_enter.ForeColor = Color.White;
             tbx_number_enter.Location = new Point(361, 281);
             tbx_number_enter.Name = "tbx_number_enter";
             tbx_number_enter.Size = new Size(728, 54);
@@ -142,6 +143,7 @@
             Controls.Add(btn_Start_Next);
             Controls.Add(lbl_Center);
             Controls.Add(btn_Back);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "form_Number_Memory";
             Text = "form_Number_Memory";
             WindowState = FormWindowState.Maximized;

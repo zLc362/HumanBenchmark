@@ -19,3 +19,5 @@ C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBe
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Debug\net6.0-windows\HumanBenchmark.form_Reaction_Time.resources
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Debug\net6.0-windows\HumanBenchmark.dll.config
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Debug\net6.0-windows\HumanBenchmark.form_Number_Memory.resources
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Debug\net6.0-windows\HumanBenchmark.fork_Highscores.resources
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Debug\net6.0-windows\HumanBenchmark.form_Word_Memory.resources

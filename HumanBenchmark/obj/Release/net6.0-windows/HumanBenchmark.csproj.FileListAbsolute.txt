@@ -19,7 +19,4 @@ C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBe
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\HumanBenchmark.pdb
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\HumanBenchmark.genruntimeconfig.cache
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\ref\HumanBenchmark.dll
-C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\HumanBenchmark.dll.manifest
-C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\HumanBenchmark.application
-C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\HumanBenchmark.dll.manifest
-C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\HumanBenchmark.application
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\HumanBenchmark.fork_Highscores.resources

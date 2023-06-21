@@ -120,6 +120,7 @@
             btn_Word_Memory.Size = new Size(250, 250);
             btn_Word_Memory.TabIndex = 4;
             btn_Word_Memory.UseVisualStyleBackColor = false;
+            btn_Word_Memory.Click += btn_Word_Memory_Click;
             btn_Word_Memory.MouseEnter += btn_Word_Memory_MouseEnter;
             btn_Word_Memory.MouseLeave += btn_Word_Memory_MouseLeave;
             // 
@@ -207,6 +208,7 @@
             btn_highscores.Size = new Size(150, 150);
             btn_highscores.TabIndex = 10;
             btn_highscores.UseVisualStyleBackColor = false;
+            btn_highscores.Click += btn_highscores_Click;
             btn_highscores.MouseEnter += btn_highscores_MouseEnter;
             btn_highscores.MouseLeave += btn_highscores_MouseLeave;
             // 

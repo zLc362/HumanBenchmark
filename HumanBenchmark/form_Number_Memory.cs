@@ -28,7 +28,6 @@ namespace HumanBenchmark
         public form_Number_Memory()
         {
             InitializeComponent();
-            numberToGuess = "";
             started = false;
             enteringNumber = false;
             tbx_number_enter.Hide();
@@ -101,7 +100,7 @@ namespace HumanBenchmark
                 {
                     enteringNumber = false;
                     lbl_Center.Font = font_regular;
-                    lbl_Center.Text = String.Format("Number:\r\n{0}\r\nYour Guess:\r\n{1}\r\nLevel {2}", numberToGuess, tbx_number_enter.Text, level);
+                    lbl_Center.Text = String.Format("Number:\r\n{0}\r\nYour Guess:\r\n{1}\r\n\r\nLevel {2}", numberToGuess, tbx_number_enter.Text, level);
                     lbl_Center.Show();
                     tbx_number_enter.Hide();
 
@@ -158,7 +157,7 @@ namespace HumanBenchmark
 
         private void form_Number_Memory_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            HighScores.updateNumber_Memory(level);
         }
 
         private void form_Number_Memory_Paint(object sender, PaintEventArgs e)

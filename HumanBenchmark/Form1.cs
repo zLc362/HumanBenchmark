@@ -37,9 +37,11 @@ namespace HumanBenchmark
         public static void disableHoverColorChange(Button button)
         {
             button.FlatAppearance.MouseOverBackColor = button.BackColor;
+            button.FlatAppearance.MouseDownBackColor = button.BackColor;
             button.BackColorChanged += (s, e) =>
             {
                 button.FlatAppearance.MouseOverBackColor = button.BackColor;
+                button.FlatAppearance.MouseDownBackColor = button.BackColor;
             };
         }
         private void btn_Reaction_Time_MouseEnter(object sender, EventArgs e)
@@ -132,6 +134,22 @@ namespace HumanBenchmark
         private void btn_highscores_MouseEnter(object sender, EventArgs e)
         {
             btn_highscores.BackgroundImage = Resources.Highscore_Active;
+        }
+
+        private void btn_highscores_Click(object sender, EventArgs e)
+        {
+            Form highscores = new fork_Highscores();
+            this.Hide();
+            highscores.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_Word_Memory_Click(object sender, EventArgs e)
+        {
+            Form word_memory = new form_Word_Memory();
+            this.Hide();
+            word_memory.ShowDialog();
+            this.Show();
         }
     }
 }

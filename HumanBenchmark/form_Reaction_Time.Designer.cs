@@ -249,11 +249,12 @@
             btn_Back.FlatAppearance.BorderColor = Color.White;
             btn_Back.FlatAppearance.BorderSize = 0;
             btn_Back.FlatStyle = FlatStyle.Flat;
-            btn_Back.Location = new Point(12, 827);
+            btn_Back.Location = new Point(12, 795);
             btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(118, 118);
+            btn_Back.Size = new Size(150, 150);
             btn_Back.TabIndex = 14;
             btn_Back.UseVisualStyleBackColor = false;
+            btn_Back.Click += btn_Back_Click;
             btn_Back.MouseClick += btn_Back_MouseClick;
             btn_Back.MouseEnter += btn_Back_MouseEnter;
             btn_Back.MouseLeave += btn_Back_MouseLeave;
