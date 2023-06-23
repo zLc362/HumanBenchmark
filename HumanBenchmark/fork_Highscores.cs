@@ -15,10 +15,15 @@ namespace HumanBenchmark
 {
     public partial class form_Highscores : System.Windows.Forms.Form
     {
+        private List<Brush> buttonBrushes = new List<Brush>();
         public form_Highscores()
         {
             InitializeComponent();
-            
+
+            buttonBrushes.Add(new SolidBrush(Color.FromKnownColor(KnownColor.MenuHighlight)));
+            buttonBrushes.Add(new SolidBrush(Color.FromKnownColor(KnownColor.MenuHighlight)));
+            buttonBrushes.Add(new SolidBrush(Color.FromKnownColor(KnownColor.MenuHighlight)));
+            buttonBrushes.Add(new SolidBrush(Color.FromKnownColor(KnownColor.MenuHighlight)));
 
             form_Main_Menu.disableHoverColorChange(btn_clear_number_memory);
             form_Main_Menu.disableHoverColorChange(btn_clear_reaction_time);
@@ -53,11 +58,11 @@ namespace HumanBenchmark
             }
             else lbl_Word_Memory.Text = HighScores.Word_Memory.ToString() + " Words";
         }
-        private void drawButton(PaintEventArgs e)
+        private void drawButton(PaintEventArgs e,int buttonIndex)
         {
-            Brush brush = new SolidBrush(Color.LightBlue);
+            Brush brush = buttonBrushes[buttonIndex];
             e.Graphics.FillRoundedRectangle(brush, e.ClipRectangle, 15);
-            brush = new SolidBrush(Color.Black);
+            brush = new SolidBrush(Color.White);
             StringFormat format = new StringFormat();
             format.Alignment = StringAlignment.Center;
             format.LineAlignment = StringAlignment.Center;
@@ -67,22 +72,22 @@ namespace HumanBenchmark
 
         private void btn_clear_reaction_time_Paint(object sender, PaintEventArgs e)
         {
-            drawButton(e);
+            drawButton(e,0);
         }
 
         private void btn_clear_Sequence_memory_Paint(object sender, PaintEventArgs e)
         {
-            drawButton(e);
+            drawButton(e,1);
         }
 
         private void btn_clear_word_memory_Paint(object sender, PaintEventArgs e)
         {
-            drawButton(e);
+            drawButton(e,2);
         }
 
         private void btn_clear_number_memory_Paint(object sender, PaintEventArgs e)
         {
-            drawButton(e);
+            drawButton(e,3);
         }
 
         private void btn_clear_reaction_time_Click(object sender, EventArgs e)
@@ -166,6 +171,46 @@ namespace HumanBenchmark
             Brush brush = new SolidBrush(Color.White);
             e.Graphics.FillRoundedRectangle(brush, e.ClipRectangle, 15);
             brush.Dispose();
+        }
+
+        private void btn_clear_reaction_time_MouseEnter(object sender, EventArgs e)
+        {
+            buttonBrushes[0] = new SolidBrush(Color.FromKnownColor(KnownColor.HotTrack));
+        }
+
+        private void btn_clear_reaction_time_MouseLeave(object sender, EventArgs e)
+        {
+            buttonBrushes[0] = new SolidBrush(Color.FromKnownColor(KnownColor.MenuHighlight));
+        }
+
+        private void btn_clear_Sequence_memory_MouseEnter(object sender, EventArgs e)
+        {
+            buttonBrushes[1] = new SolidBrush(Color.FromKnownColor(KnownColor.HotTrack));
+        }
+
+        private void btn_clear_Sequence_memory_MouseLeave(object sender, EventArgs e)
+        {
+            buttonBrushes[1] = new SolidBrush(Color.FromKnownColor(KnownColor.MenuHighlight));
+        }
+
+        private void btn_clear_word_memory_MouseEnter(object sender, EventArgs e)
+        {
+            buttonBrushes[2] = new SolidBrush(Color.FromKnownColor(KnownColor.HotTrack));
+        }
+
+        private void btn_clear_word_memory_MouseLeave(object sender, EventArgs e)
+        {
+            buttonBrushes[2] = new SolidBrush(Color.FromKnownColor(KnownColor.MenuHighlight));
+        }
+
+        private void btn_clear_number_memory_MouseEnter(object sender, EventArgs e)
+        {
+            buttonBrushes[3] = new SolidBrush(Color.FromKnownColor(KnownColor.HotTrack));
+        }
+
+        private void btn_clear_number_memory_MouseLeave(object sender, EventArgs e)
+        {
+            buttonBrushes[3] = new SolidBrush(Color.FromKnownColor(KnownColor.MenuHighlight));
         }
     }
 }

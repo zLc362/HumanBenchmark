@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Sequence_Memory));
             btn_1 = new Button();
             btn_2 = new Button();
             btn_3 = new Button();
@@ -357,6 +358,7 @@
             Controls.Add(btn_2);
             Controls.Add(btn_1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "form_Sequence_Memory";
             Text = "form_Sequence_Memory";
             WindowState = FormWindowState.Maximized;

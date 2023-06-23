@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Highscores));
             panel_Reaction_Time = new Panel();
             panel_Reaction_time_background = new Panel();
             btn_clear_reaction_time = new Button();
@@ -95,6 +96,8 @@
             btn_clear_reaction_time.UseVisualStyleBackColor = false;
             btn_clear_reaction_time.Click += btn_clear_reaction_time_Click;
             btn_clear_reaction_time.Paint += btn_clear_reaction_time_Paint;
+            btn_clear_reaction_time.MouseEnter += btn_clear_reaction_time_MouseEnter;
+            btn_clear_reaction_time.MouseLeave += btn_clear_reaction_time_MouseLeave;
             // 
             // lbl_reaction_time
             // 
@@ -144,6 +147,8 @@
             btn_clear_Sequence_memory.UseVisualStyleBackColor = false;
             btn_clear_Sequence_memory.Click += btn_clear_Sequence_memory_Click;
             btn_clear_Sequence_memory.Paint += btn_clear_Sequence_memory_Paint;
+            btn_clear_Sequence_memory.MouseEnter += btn_clear_Sequence_memory_MouseEnter;
+            btn_clear_Sequence_memory.MouseLeave += btn_clear_Sequence_memory_MouseLeave;
             // 
             // lbl_Sequence_Memory
             // 
@@ -204,6 +209,8 @@
             btn_clear_word_memory.UseVisualStyleBackColor = false;
             btn_clear_word_memory.Click += btn_clear_word_memory_Click;
             btn_clear_word_memory.Paint += btn_clear_word_memory_Paint;
+            btn_clear_word_memory.MouseEnter += btn_clear_word_memory_MouseEnter;
+            btn_clear_word_memory.MouseLeave += btn_clear_word_memory_MouseLeave;
             // 
             // lbl_Word_Memory
             // 
@@ -264,6 +271,8 @@
             btn_clear_number_memory.UseVisualStyleBackColor = false;
             btn_clear_number_memory.Click += btn_clear_number_memory_Click;
             btn_clear_number_memory.Paint += btn_clear_number_memory_Paint;
+            btn_clear_number_memory.MouseEnter += btn_clear_number_memory_MouseEnter;
+            btn_clear_number_memory.MouseLeave += btn_clear_number_memory_MouseLeave;
             // 
             // lbl_Number_Memory
             // 
@@ -338,6 +347,7 @@
             Controls.Add(panel5);
             Controls.Add(panel3);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "form_Highscores";
             Text = "Highscores";
             WindowState = FormWindowState.Maximized;

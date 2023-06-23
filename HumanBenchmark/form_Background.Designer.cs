@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Background));
             SuspendLayout();
             // 
             // form_Background
@@ -39,6 +40,7 @@
             ControlBox = false;
             Enabled = false;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "form_Background";
             Text = "form_Background";
             WindowState = FormWindowState.Maximized;

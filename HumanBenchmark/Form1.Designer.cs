@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Main_Menu));
             label1 = new Label();
             btn_Reaction_Time = new Button();
             btn_Number_Memory = new Button();
@@ -231,6 +232,7 @@
             Controls.Add(btn_Reaction_Time);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "form_Main_Menu";
             Text = "Human Benchmark";
             WindowState = FormWindowState.Maximized;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Word_Memory));
             btn_Start = new Button();
             lbl_Center = new Label();
             btn_Back = new Button();
@@ -125,6 +126,7 @@
             Controls.Add(lbl_Center);
             Controls.Add(btn_Start);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "form_Word_Memory";
             Text = "form_Word_Memory";
             WindowState = FormWindowState.Maximized;

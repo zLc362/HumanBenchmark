@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Reaction_Time));
             clickPanel = new Panel();
             lbl_Center = new Label();
             lbl_Score1 = new Label();
@@ -271,6 +272,7 @@
             Controls.Add(panel1);
             Controls.Add(clickPanel);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "form_Reaction_Time";
             Text = "Reaction Time";
             TopMost = true;

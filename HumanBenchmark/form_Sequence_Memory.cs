@@ -34,7 +34,8 @@ namespace HumanBenchmark
             //game.addToOriginalSequence();
             //game.addToOriginalSequence();
             //game.addToOriginalSequence();
-            lbl_level.Text = "";
+            lbl_level.Text = "Level 0";
+            lbl_level.Hide();
             colorBrushes();
             label_debug.Text = game.getStringSequence();
         }
@@ -83,6 +84,7 @@ namespace HumanBenchmark
             lbl_Center.Text = "You reached\r\nLevel: " + level;
             level = 0;
             lbl_Center.Show();
+            lbl_level.Hide();
             buttonsShown(false);
             label_debug.Text = game.getStringSequence();
             btn_Start.Show();
@@ -131,6 +133,7 @@ namespace HumanBenchmark
             buttonsEnabled(false);
             buttonsShown(true);
             lbl_Center.Hide();
+            lbl_level.Show();
             tmr_sequence_show.Start();
         }
 

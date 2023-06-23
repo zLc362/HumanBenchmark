@@ -1,0 +1,8 @@
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\Release1\HumanBenchmark.pdb
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\Release1\HumanBenchmark.dll.config
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\Release1\D3DCompiler_47_cor3.dll
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\Release1\PenImc_cor3.dll
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\Release1\PresentationNative_cor3.dll
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\Release1\vcruntime140_cor3.dll
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\Release1\wpfgfx_cor3.dll
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\publish\Release1\HumanBenchmark.exe

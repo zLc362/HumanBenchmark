@@ -504,8 +504,6 @@ C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBe
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\win-x64\zh-Hant\WindowsBase.resources.dll
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\bin\Release\net6.0-windows\win-x64\zh-Hant\WindowsFormsIntegration.resources.dll
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.csproj.AssemblyReference.cache
-C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.fork_Highscores.resources
-C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.Form1.resources
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.form_Number_Memory.resources
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.form_Reaction_Time.resources
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.Properties.Resources.resources
@@ -520,3 +518,8 @@ C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBe
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\refint\HumanBenchmark.dll
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.pdb
 C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\ref\HumanBenchmark.dll
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.form_Highscores.resources
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.form_Main_Menu.resources
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.form_Background.resources
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.form_Sequence_Memory.resources
+C:\Users\zLc\Desktop\Stefan\Programing\Visual Studio 2020\HumanBenchmark\HumanBenchmark\obj\Release\net6.0-windows\win-x64\HumanBenchmark.form_Word_Memory.resources
