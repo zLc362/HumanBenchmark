@@ -12,32 +12,36 @@ using System.Windows.Forms;
 
 namespace HumanBenchmark
 {
-    public partial class form_Number_Memory : Form
+    public partial class form_Number_Memory : System.Windows.Forms.Form
     {
         private Random random = new Random();
         private String numberToGuess { get; set; }
-        private int lowerBound { get; set; }
-        private int upperBound { get; set; }
         private int level { get; set; }
         private bool started { get; set; }
         private bool enteringNumber { get; set; }
         private String buttonDisplay { get; set; }
         private Font font_regular { get; set; }
         private Font font_large { get; set; }
+        private Brush brushButtonStart { get; set; } = new SolidBrush(Color.FromArgb(0, 102, 204));
 
         public form_Number_Memory()
         {
             InitializeComponent();
             started = false;
             enteringNumber = false;
+
             tbx_number_enter.Hide();
             progress_bar_back.Hide();
             progress_bar_front.Hide();
+
             buttonDisplay = "Start";
+
             font_regular = lbl_Center.Font;
             font_large = new Font("Segoe UI", 40, FontStyle.Bold);
-            Form1.disableHoverColorChange(btn_Start_Next);
-            Form1.disableHoverColorChange(btn_Back);
+
+            form_Main_Menu.disableHoverColorChange(btn_Start_Next);
+            form_Main_Menu.disableHoverColorChange(btn_Back);
+
         }
         private void getNewNumber()
         {
@@ -54,17 +58,22 @@ namespace HumanBenchmark
             if (progress_bar_front.Width < 1)
             {
                 progress_bar_front.Width = progress_bar_back.Width;
-                tmr_countdown.Stop();
-                btn_Start_Next.Show();
-                lbl_Center.Hide();
-                lbl_Center.Font = font_regular;
-                tbx_number_enter.Show();
-                tbx_number_enter.Focus();
-                enteringNumber = true;
                 progress_bar_back.Hide();
                 progress_bar_front.Hide();
+
+                tmr_countdown.Stop();
+
                 buttonDisplay = "Guess";
                 btn_Start_Next.Invalidate();
+                btn_Start_Next.Show();
+
+                lbl_Center.Hide();
+                lbl_Center.Font = font_regular;
+
+                tbx_number_enter.Show();
+                tbx_number_enter.Focus();
+
+                enteringNumber = true;
 
                 return;
             }
@@ -73,17 +82,18 @@ namespace HumanBenchmark
         private void StartUp()
         {
             started = true;
-
+            tmr_countdown.Interval = 10;
             tmr_countdown.Start();
-            btn_Start_Next.Hide();
-            lowerBound = 1;
-            upperBound = 10;
+
             level = 1;
             getNewNumber();
             lbl_Center.Text = numberToGuess.ToString();
             lbl_Center.Font = font_large;
+
             progress_bar_back.Show();
             progress_bar_front.Show();
+
+            btn_Start_Next.Hide();
             buttonDisplay = "Next";
             btn_Start_Next.Invalidate();
         }
@@ -99,16 +109,15 @@ namespace HumanBenchmark
                 if (enteringNumber)
                 {
                     enteringNumber = false;
+
                     lbl_Center.Font = font_regular;
                     lbl_Center.Text = String.Format("Number:\r\n{0}\r\nYour Guess:\r\n{1}\r\n\r\nLevel {2}", numberToGuess, tbx_number_enter.Text, level);
                     lbl_Center.Show();
-                    tbx_number_enter.Hide();
 
+                    tbx_number_enter.Hide();
                     if (numberToGuess.Equals(tbx_number_enter.Text))
                     {
                         level++;
-                        lowerBound *= 10;
-                        upperBound *= 10;
                         buttonDisplay = "Next";
                         btn_Start_Next.Invalidate();
                     }
@@ -120,34 +129,22 @@ namespace HumanBenchmark
                     }
                     tbx_number_enter.Text = String.Empty;
                     getNewNumber();
-
-
                 }
                 else
                 {
                     lbl_Center.Font = font_large;
                     lbl_Center.Text = numberToGuess.ToString();
-                    tmr_countdown.Interval = (int)(tmr_countdown.Interval * 1.1);
+
+                    tmr_countdown.Interval = (int)(tmr_countdown.Interval * 1.3);
                     tmr_countdown.Start();
+
                     btn_Start_Next.Hide();
+
                     progress_bar_back.Show();
                     progress_bar_front.Show();
                 }
             }
-            lbl_highscore.Invalidate();
             HighScores.updateNumber_Memory(level);
-        }
-
-        private void lbl_highscore_Paint(object sender, PaintEventArgs e)
-        {
-            Brush brush = new SolidBrush(Color.White);
-            e.Graphics.FillRoundedRectangle(brush, e.ClipRectangle, 15);
-            brush = new SolidBrush(Color.Black);
-            StringFormat format = new StringFormat();
-            format.Alignment = StringAlignment.Center;
-            format.LineAlignment = StringAlignment.Center;
-            e.Graphics.DrawString("Level " + level.ToString(), lbl_highscore.Font, brush, e.ClipRectangle, format);
-            brush.Dispose();
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -176,8 +173,8 @@ namespace HumanBenchmark
 
         private void btn_Start_Next_Paint(object sender, PaintEventArgs e)
         {
-            Pen pen = new Pen(Color.Black, 2);
-            Brush brush = new SolidBrush(progress_bar_back.BackColor);
+            //Pen pen = new Pen(Color.Black, 2);
+            Brush brush = brushButtonStart;
             e.Graphics.FillRoundedRectangle(brush, e.ClipRectangle, 15);
             brush = new SolidBrush(Color.White);
             StringFormat format = new StringFormat();
@@ -202,6 +199,18 @@ namespace HumanBenchmark
         private void btn_Back_MouseLeave(object sender, EventArgs e)
         {
             btn_Back.BackgroundImage = Resources.Back_Normal;
+        }
+
+        private void btn_Start_Next_MouseEnter(object sender, EventArgs e)
+        {
+            brushButtonStart = new SolidBrush(Color.FromArgb(0, 89, 179));
+            btn_Start_Next.Invalidate();
+        }
+
+        private void btn_Start_Next_MouseLeave(object sender, EventArgs e)
+        {
+            brushButtonStart = new SolidBrush(Color.FromArgb(0, 102, 204));
+            btn_Start_Next.Invalidate();
         }
     }
 }

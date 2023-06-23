@@ -121,6 +121,16 @@ namespace HumanBenchmark.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] PRIMETIME__FONT {
+            get {
+                object obj = ResourceManager.GetObject("PRIMETIME__FONT", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Reaction_Time_Active {

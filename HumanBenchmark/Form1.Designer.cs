@@ -1,6 +1,6 @@
 ﻿namespace HumanBenchmark
 {
-    partial class Form1
+    partial class form_Main_Menu
     {
         /// <summary>
         ///  Required designer variable.
@@ -45,13 +45,13 @@
             // 
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Font = new Font("Yu Gothic UI", 30F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 30F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(527, -5);
+            label1.Location = new Point(490, 72);
             label1.Name = "label1";
-            label1.Size = new Size(462, 67);
+            label1.Size = new Size(556, 67);
             label1.TabIndex = 0;
-            label1.Text = "Human Benchmark";
+            label1.Text = "HUMAN BENCHMARK";
             // 
             // btn_Reaction_Time
             // 
@@ -103,6 +103,7 @@
             btn_Sequence_Memory.Size = new Size(250, 250);
             btn_Sequence_Memory.TabIndex = 3;
             btn_Sequence_Memory.UseVisualStyleBackColor = false;
+            btn_Sequence_Memory.Click += btn_Sequence_Memory_Click;
             btn_Sequence_Memory.MouseEnter += btn_Sequence_Memory_MouseEnter;
             btn_Sequence_Memory.MouseLeave += btn_Sequence_Memory_MouseLeave;
             // 
@@ -212,7 +213,7 @@
             btn_highscores.MouseEnter += btn_highscores_MouseEnter;
             btn_highscores.MouseLeave += btn_highscores_MouseLeave;
             // 
-            // Form1
+            // form_Main_Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -229,10 +230,9 @@
             Controls.Add(btn_Number_Memory);
             Controls.Add(btn_Reaction_Time);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            Name = "Form1";
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "form_Main_Menu";
             Text = "Human Benchmark";
-            TopMost = true;
             WindowState = FormWindowState.Maximized;
             FormClosing += Form1_FormClosing;
             ResumeLayout(false);

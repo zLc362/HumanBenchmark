@@ -1,18 +1,18 @@
 using HumanBenchmark.Properties;
-
+using System.Drawing.Text;
+using System.Runtime.InteropServices;
 
 namespace HumanBenchmark
 {
-    public partial class Form1 : Form
+    public partial class form_Main_Menu : Form
     {
-        public Form1()
+        public form_Main_Menu()
         {
-
             InitializeComponent();
             DoubleBuffered = true;
             Startup();
-
         }
+
         private void Startup()
         {
             btn_Reaction_Time.BackgroundImage = Resources.Reaction_Time_Normal;
@@ -27,11 +27,14 @@ namespace HumanBenchmark
             disableHoverColorChange(btn_Word_Memory);
             disableHoverColorChange(btn_Shut_Down);
 
-            HighScores.Reaction_Time = Properties.Settings.Default.ReactionTime;
-            HighScores.Word_Memory = Properties.Settings.Default.WordMemory;
-            HighScores.Sequence_Memory = Properties.Settings.Default.SequenceMemory;
-            HighScores.Number_Memory = Properties.Settings.Default.NumberMemory;
+            HighScores.Reaction_Time = Settings.Default.ReactionTime;
+            HighScores.Word_Memory = Settings.Default.WordMemory;
+            HighScores.Sequence_Memory = Settings.Default.SequenceMemory;
+            HighScores.Number_Memory = Settings.Default.NumberMemory;
 
+            Form background = new form_Background();
+            background.Show();
+            this.TopMost = true;
 
         }
         public static void disableHoverColorChange(Button button)
@@ -89,17 +92,16 @@ namespace HumanBenchmark
             Form reactionTime = new form_Reaction_Time();
             this.Hide();
             reactionTime.ShowDialog();
-
             this.Show();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Properties.Settings.Default.ReactionTime = HighScores.Reaction_Time;
-            Properties.Settings.Default.SequenceMemory = HighScores.Sequence_Memory;
-            Properties.Settings.Default.WordMemory = HighScores.Word_Memory;
-            Properties.Settings.Default.NumberMemory = HighScores.Number_Memory;
-            Properties.Settings.Default.Save();
+            Settings.Default.ReactionTime = HighScores.Reaction_Time;
+            Settings.Default.SequenceMemory = HighScores.Sequence_Memory;
+            Settings.Default.WordMemory = HighScores.Word_Memory;
+            Settings.Default.NumberMemory = HighScores.Number_Memory;
+            Settings.Default.Save();
         }
 
         private void btn_Shut_Down_MouseEnter(object sender, EventArgs e)
@@ -122,7 +124,6 @@ namespace HumanBenchmark
             Form number_memory = new form_Number_Memory();
             this.Hide();
             number_memory.ShowDialog();
-
             this.Show();
         }
 
@@ -138,7 +139,7 @@ namespace HumanBenchmark
 
         private void btn_highscores_Click(object sender, EventArgs e)
         {
-            Form highscores = new fork_Highscores();
+            Form highscores = new form_Highscores();
             this.Hide();
             highscores.ShowDialog();
             this.Show();
@@ -151,5 +152,14 @@ namespace HumanBenchmark
             word_memory.ShowDialog();
             this.Show();
         }
+
+        private void btn_Sequence_Memory_Click(object sender, EventArgs e)
+        {
+            Form sequence_memory = new form_Sequence_Memory();
+            this.Hide();
+            sequence_memory.ShowDialog();
+            this.Show();
+        }
+
     }
 }

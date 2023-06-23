@@ -15,7 +15,7 @@ using Plasmoid.Extensions;
 
 namespace HumanBenchmark
 {
-    public partial class form_Reaction_Time : Form
+    public partial class form_Reaction_Time : System.Windows.Forms.Form
     {
         private bool Started { get; set; }
         public ReactionTimeScores scores { get; set; }
@@ -36,7 +36,7 @@ namespace HumanBenchmark
             gameTime = new Stopwatch();
             Startup();
             updateLabels();
-            Form1.disableHoverColorChange(btn_Back);
+            form_Main_Menu.disableHoverColorChange(btn_Back);
             brushBtn_Global = new SolidBrush(Color.White);
             brushBtn_ALL = new SolidBrush(Color.White);
             lbl_Center.BackColor = System.Drawing.Color.Transparent;

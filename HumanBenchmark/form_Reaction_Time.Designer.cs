@@ -211,7 +211,7 @@
             panel1.Controls.Add(lbl_Score3);
             panel1.Controls.Add(lbl_Score1);
             panel1.Controls.Add(label_LFS);
-            panel1.Location = new Point(262, 703);
+            panel1.Location = new Point(262, 715);
             panel1.Name = "panel1";
             panel1.Size = new Size(1081, 107);
             panel1.TabIndex = 11;
@@ -223,7 +223,7 @@
             panel2.BackColor = Color.FromArgb(230, 232, 244);
             panel2.Controls.Add(lbl_localHS);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(262, 834);
+            panel2.Location = new Point(262, 846);
             panel2.Name = "panel2";
             panel2.Size = new Size(517, 118);
             panel2.TabIndex = 12;
@@ -235,7 +235,7 @@
             panel3.BackColor = Color.FromArgb(230, 232, 244);
             panel3.Controls.Add(lbl_globalHS);
             panel3.Controls.Add(label2);
-            panel3.Location = new Point(808, 834);
+            panel3.Location = new Point(808, 846);
             panel3.Name = "panel3";
             panel3.Size = new Size(535, 118);
             panel3.TabIndex = 13;
@@ -249,7 +249,7 @@
             btn_Back.FlatAppearance.BorderColor = Color.White;
             btn_Back.FlatAppearance.BorderSize = 0;
             btn_Back.FlatStyle = FlatStyle.Flat;
-            btn_Back.Location = new Point(12, 795);
+            btn_Back.Location = new Point(12, 818);
             btn_Back.Name = "btn_Back";
             btn_Back.Size = new Size(150, 150);
             btn_Back.TabIndex = 14;
@@ -264,13 +264,13 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 232, 244);
-            ClientSize = new Size(1584, 957);
+            ClientSize = new Size(1584, 980);
             Controls.Add(btn_Back);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(clickPanel);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "form_Reaction_Time";
             Text = "Reaction Time";
             TopMost = true;

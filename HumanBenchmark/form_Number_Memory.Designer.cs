@@ -36,7 +36,7 @@
             progress_bar_front = new Panel();
             tmr_countdown = new System.Windows.Forms.Timer(components);
             tbx_number_enter = new TextBox();
-            lbl_highscore = new Label();
+            progress_bar_back.SuspendLayout();
             SuspendLayout();
             // 
             // btn_Back
@@ -81,11 +81,14 @@
             btn_Start_Next.UseVisualStyleBackColor = true;
             btn_Start_Next.Click += btn_Start_Next_Click;
             btn_Start_Next.Paint += btn_Start_Next_Paint;
+            btn_Start_Next.MouseEnter += btn_Start_Next_MouseEnter;
+            btn_Start_Next.MouseLeave += btn_Start_Next_MouseLeave;
             // 
             // progress_bar_back
             // 
             progress_bar_back.Anchor = AnchorStyles.None;
             progress_bar_back.BackColor = SystemColors.HotTrack;
+            progress_bar_back.Controls.Add(progress_bar_front);
             progress_bar_back.Location = new Point(579, 419);
             progress_bar_back.Name = "progress_bar_back";
             progress_bar_back.Size = new Size(283, 23);
@@ -95,7 +98,7 @@
             // 
             progress_bar_front.Anchor = AnchorStyles.None;
             progress_bar_front.BackColor = Color.White;
-            progress_bar_front.Location = new Point(579, 419);
+            progress_bar_front.Location = new Point(0, 0);
             progress_bar_front.Name = "progress_bar_front";
             progress_bar_front.Size = new Size(283, 23);
             progress_bar_front.TabIndex = 18;
@@ -119,36 +122,24 @@
             tbx_number_enter.TextAlign = HorizontalAlignment.Center;
             tbx_number_enter.KeyPress += tbx_number_enter_KeyPress;
             // 
-            // lbl_highscore
-            // 
-            lbl_highscore.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            lbl_highscore.Font = new Font("Segoe UI", 26F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_highscore.Location = new Point(1226, 669);
-            lbl_highscore.Name = "lbl_highscore";
-            lbl_highscore.Size = new Size(196, 60);
-            lbl_highscore.TabIndex = 19;
-            lbl_highscore.Text = "Level 0";
-            lbl_highscore.Paint += lbl_highscore_Paint;
-            // 
             // form_Number_Memory
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuHighlight;
             ClientSize = new Size(1434, 741);
-            Controls.Add(progress_bar_front);
-            Controls.Add(lbl_highscore);
             Controls.Add(tbx_number_enter);
             Controls.Add(progress_bar_back);
             Controls.Add(btn_Start_Next);
             Controls.Add(lbl_Center);
             Controls.Add(btn_Back);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "form_Number_Memory";
             Text = "form_Number_Memory";
             WindowState = FormWindowState.Maximized;
             FormClosing += form_Number_Memory_FormClosing;
             Paint += form_Number_Memory_Paint;
+            progress_bar_back.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -162,6 +153,5 @@
         private Panel progress_bar_front;
         private System.Windows.Forms.Timer tmr_countdown;
         private TextBox tbx_number_enter;
-        private Label lbl_highscore;
     }
 }

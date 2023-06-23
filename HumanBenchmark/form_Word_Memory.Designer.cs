@@ -49,6 +49,8 @@
             btn_Start.UseVisualStyleBackColor = true;
             btn_Start.Click += btn_Start_Click;
             btn_Start.Paint += btn_Start_Paint;
+            btn_Start.MouseEnter += btn_Start_MouseEnter;
+            btn_Start.MouseLeave += btn_Start_MouseLeave;
             // 
             // lbl_Center
             // 
@@ -92,6 +94,8 @@
             btn_New.UseVisualStyleBackColor = true;
             btn_New.Click += btn_New_Click;
             btn_New.Paint += btn_New_Paint;
+            btn_New.MouseEnter += btn_New_MouseEnter;
+            btn_New.MouseLeave += btn_New_MouseLeave;
             // 
             // btn_Seen
             // 
@@ -106,6 +110,8 @@
             btn_Seen.UseVisualStyleBackColor = true;
             btn_Seen.Click += btn_Seen_Click;
             btn_Seen.Paint += btn_Seen_Paint;
+            btn_Seen.MouseEnter += btn_Seen_MouseEnter;
+            btn_Seen.MouseLeave += btn_Seen_MouseLeave;
             // 
             // form_Word_Memory
             // 
@@ -118,7 +124,7 @@
             Controls.Add(btn_Back);
             Controls.Add(lbl_Center);
             Controls.Add(btn_Start);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "form_Word_Memory";
             Text = "form_Word_Memory";
             WindowState = FormWindowState.Maximized;

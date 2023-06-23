@@ -13,16 +13,17 @@ using System.Windows.Forms;
 
 namespace HumanBenchmark
 {
-    public partial class fork_Highscores : Form
+    public partial class form_Highscores : System.Windows.Forms.Form
     {
-        public fork_Highscores()
+        public form_Highscores()
         {
             InitializeComponent();
+            
 
-            Form1.disableHoverColorChange(btn_clear_number_memory);
-            Form1.disableHoverColorChange(btn_clear_reaction_time);
-            Form1.disableHoverColorChange(btn_clear_Sequence_memory);
-            Form1.disableHoverColorChange(btn_clear_word_memory);
+            form_Main_Menu.disableHoverColorChange(btn_clear_number_memory);
+            form_Main_Menu.disableHoverColorChange(btn_clear_reaction_time);
+            form_Main_Menu.disableHoverColorChange(btn_clear_Sequence_memory);
+            form_Main_Menu.disableHoverColorChange(btn_clear_word_memory);
 
             updateLabels();
         }
@@ -44,7 +45,7 @@ namespace HumanBenchmark
             {
                 lbl_Sequence_Memory.Text = "None";
             }
-            else lbl_Sequence_Memory.Text = HighScores.Sequence_Memory.ToString();
+            else lbl_Sequence_Memory.Text = "Level" + HighScores.Sequence_Memory.ToString();
 
             if (HighScores.Word_Memory == 0)
             {
@@ -86,26 +87,42 @@ namespace HumanBenchmark
 
         private void btn_clear_reaction_time_Click(object sender, EventArgs e)
         {
-            HighScores.resetReaction_time();
-            updateLabels();
+            if (MessageBox.Show("Are you sure you want to reset the highscore for Reaction Time?", "Reset Highscore?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                HighScores.resetReaction_time();
+                updateLabels();
+            }
+
         }
 
         private void btn_clear_Sequence_memory_Click(object sender, EventArgs e)
         {
-            HighScores.resetSequence_Memory();
-            updateLabels();
+            if (MessageBox.Show("Are you sure you want to reset the highscore for Sequence Memory?", "Reset Highscore?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                HighScores.resetSequence_Memory();
+                updateLabels();
+            }
+
         }
 
         private void btn_clear_word_memory_Click(object sender, EventArgs e)
         {
-            HighScores.resetWord_Memory();
-            updateLabels();
+            if (MessageBox.Show("Are you sure you want to reset the highscore for Word Memory?", "Reset Highscore?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                HighScores.resetWord_Memory();
+                updateLabels();
+            }
+
         }
 
         private void btn_clear_number_memory_Click(object sender, EventArgs e)
         {
-            HighScores.resetNumber_Memory();
-            updateLabels();
+            if (MessageBox.Show("Are you sure you want to reset the highscore for Number Memory?", "Reset Highscore?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                HighScores.resetNumber_Memory();
+                updateLabels();
+            }
+
         }
 
         private void btn_Back_MouseEnter(object sender, EventArgs e)
@@ -121,6 +138,34 @@ namespace HumanBenchmark
         private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel_Reaction_time_background_Paint(object sender, PaintEventArgs e)
+        {
+            Brush brush = new SolidBrush(Color.White);
+            e.Graphics.FillRoundedRectangle(brush, e.ClipRectangle, 15);
+            brush.Dispose();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Brush brush = new SolidBrush(Color.White);
+            e.Graphics.FillRoundedRectangle(brush, e.ClipRectangle, 15);
+            brush.Dispose();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            Brush brush = new SolidBrush(Color.White);
+            e.Graphics.FillRoundedRectangle(brush, e.ClipRectangle, 15);
+            brush.Dispose();
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            Brush brush = new SolidBrush(Color.White);
+            e.Graphics.FillRoundedRectangle(brush, e.ClipRectangle, 15);
+            brush.Dispose();
         }
     }
 }
