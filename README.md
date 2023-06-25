@@ -1,5 +1,5 @@
-﻿# Human Benchmark
-Windows Forms апликација изработена од Стефан Поцев
+﻿# Human Benchmark - [Binary Release](https://drive.google.com/uc?export=download&id=1bAqK1KmjPTKmHkfNqZ1c8dFqvehiiE1G)
+Windows Forms апликација изработена од Стефан Поцев 
 
 ---
 
