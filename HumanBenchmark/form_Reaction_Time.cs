@@ -88,7 +88,7 @@ namespace HumanBenchmark
                 {
                     gameTime.Stop();
                     scores.newScore((int)gameTime.ElapsedMilliseconds);
-                    HighScores.updateReaction_Time((int)gameTime.ElapsedMilliseconds);
+                    //HighScores.updateReaction_Time((int)gameTime.ElapsedMilliseconds);
 
                     lbl_Center.Text = String.Format("{0}ms", gameTime.ElapsedMilliseconds.ToString());
                     lbl_Center.Font = largeF;

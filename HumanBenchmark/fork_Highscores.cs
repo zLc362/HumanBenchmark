@@ -50,7 +50,7 @@ namespace HumanBenchmark
             {
                 lbl_Sequence_Memory.Text = "None";
             }
-            else lbl_Sequence_Memory.Text = "Level" + HighScores.Sequence_Memory.ToString();
+            else lbl_Sequence_Memory.Text = "Level " + HighScores.Sequence_Memory.ToString();
 
             if (HighScores.Word_Memory == 0)
             {

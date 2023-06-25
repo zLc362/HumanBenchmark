@@ -10,10 +10,10 @@ namespace HumanBenchmark
     public static class HighScores
     {
         public static int MAXREACT = 100000;
-        public static int Reaction_Time { get;set;}
-        public static int Sequence_Memory { get; set; }
-        public static int Word_Memory { get; set; }
-        public static int Number_Memory { get; set; }
+        public static int Reaction_Time { get; set; } = 100000;
+        public static int Sequence_Memory { get; set; } = 0;
+        public static int Word_Memory { get; set; } = 0;
+        public static int Number_Memory { get; set; } = 0;
 
         public static void resetReaction_time()
         {

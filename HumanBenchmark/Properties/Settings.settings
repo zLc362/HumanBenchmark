@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ReactionTime" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">100000</Value>
     </Setting>
     <Setting Name="SequenceMemory" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
