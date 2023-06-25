@@ -9,9 +9,9 @@ namespace HumanBenchmark
     public class SequenceMemoryGame
     {
         public List<int> OriginalSequence { get; set; }
-        public List<int> PlayerSequence{ get; set; }
         public int currNumber { get; set; }
         private int currIndex { get; set; }
+
         private Random random = new Random();
         public bool Completed { get; set; }
         public bool Failed {get; set; }
