@@ -44,7 +44,7 @@ namespace HumanBenchmark
         private void Startup()
         {
             Started = false;
-            clickPanel.BackColor = Color.FromArgb(51, 153, 255);
+            clickPanel.BackColor = Color.FromKnownColor(KnownColor.MenuHighlight);
             isGreen = false;
             changeToGreenTimer = 0;
             changeToGreenRandom = random.Next(5, 30);
