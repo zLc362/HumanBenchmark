@@ -78,7 +78,6 @@ namespace HumanBenchmark
             {
                 Started = true;
                 clickPanel.BackColor = Color.FromArgb(206, 38, 54);
-                isGreen = false;
                 timer_Start_Game.Interval = 100;
                 timer_Start_Game.Start();
                 lbl_Center.Text = "";
@@ -90,8 +89,10 @@ namespace HumanBenchmark
                     gameTime.Stop();
                     scores.newScore((int)gameTime.ElapsedMilliseconds);
                     HighScores.updateReaction_Time((int)gameTime.ElapsedMilliseconds);
+
                     lbl_Center.Text = String.Format("{0}ms", gameTime.ElapsedMilliseconds.ToString());
                     lbl_Center.Font = largeF;
+
                     gameTime.Reset();
                     Startup();
                     updateLabels();
